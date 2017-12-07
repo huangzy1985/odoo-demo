@@ -1,0 +1,65 @@
+<openerp>
+  <data>
+    <!-- tree视图 -->
+    <record id="view_tree_qingjia_qingjiadan" model="ir.ui.view">
+      <field name="name">请假单列表</field>
+      <field name="model">qingjia.qingjiadan</field>
+      <field name="arch" type="xml">
+        <tree>
+          <field name="employeeName"/>
+          <field name="affairsType"/>
+          <field name="startDate"/>
+          <field name="endDate"/>
+          <field name="validTime"/>
+          <field name="createUser"/>
+          <field name="state"/>
+        </tree>
+      </field>
+    </record>
+
+    <!-- form视图 -->
+    <record id="view_form_qingjia_qingjiadan" model="ir.ui.view">
+      <field name="name">请假单</field>
+      <field name="model">qingjia.qingjiadan</field>
+      <field name="arch" type="xml">
+        <form>
+          <header>
+            <button name="button_confirm" states="draft"
+                    string="提交" type="workflow" class="oe_highlight"/>
+            <button name="button_complete" states="confirm"
+                    string="批准" type="workflow" class="oe_highlight"
+                    groups="base.group_user"/>
+            <!-- 右上角 进度显示。-->
+            <field name="state" widget="statusbar"/>
+          </header>
+          <sheet>
+            <group name="group_top" string="请假单">
+              <field name="employeeName"/>
+              <field name="affairsType"/>
+              <field name="startDate"/>
+              <field name="endDate"/>
+              <field name="validTime"/>
+              <field name="isProject"/>
+              <field name="reason"/>
+              <field name="createUser"/>
+              <field name="createTime"/>
+            </group>
+          </sheet>
+        </form>
+      </field>
+    </record>
+
+    <!-- 视图动作 -->
+    <act_window id="action_qingjia_qingjiadan"
+                   name="请假单"
+                   res_model="qingjia.qingjiadan"
+                   view_mode="tree,form" />
+
+    <!-- 顶级菜单 -->
+    <menuitem name="请假" id="menu_qingjia"/>
+
+    <!-- 二级菜单 -->
+    <menuitem name="请假单" id="menu_qingjia_qingjiadan" parent="menu_qingjia" action="action_qingjia_qingjiadan"/>
+
+  </data>
+</openerp>

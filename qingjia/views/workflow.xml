@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<openerp>
+  <data>
+      <!-- 工作流 -->
+      <record id="workflow_qingjia_qingjiadan" model="workflow">
+          <field name="name">请假单工作流</field>
+          <field name="osv">qingjia.qingjiadan</field>
+          <field name="on_create">True</field>
+      </record>
+
+      <!-- 工作流活动 -->
+      <record model="workflow.activity" id="activity_draft" >
+          <field name="wkf_id" ref="workflow_qingjia_qingjiadan"/>
+          <field name="name">草稿</field>
+          <field name="kind">dummy</field>
+          <field name="flow_start">True</field>
+      </record>
+
+      <record model="workflow.activity" id="activity_confirm" >
+                    <field name="wkf_id" ref="workflow_qingjia_qingjiadan"/>
+          <field name="name">待批准</field>
+          <field name="kind">function</field>
+          <field name="action">do_confirm()</field>
+      </record>
+
+      <record  model="workflow.activity" id="activity_complete">
+          <field name="wkf_id" ref="workflow_qingjia_qingjiadan"/>
+          <field name="name">已完成</field>
+          <field name="kind">function</field>
+          <field name="action">do_complete()</field>
+      </record>
+
+      <!-- 工作流流转 -->
+      <record id="transition_draft2confirm" model="workflow.transition">
+          <field name="act_from" ref="activity_draft" />
+          <field name="act_to" ref="activity_confirm" />
+          <field name="signal">button_confirm</field>
+      </record>
+      <record id="transition_confirm2complete" model="workflow.transition">
+          <field name="act_from" ref="activity_confirm" />
+          <field name="act_to" ref="activity_complete" />
+          <field name="signal">button_complete</field>
+      </record>
+
+  </data>
+</openerp>
