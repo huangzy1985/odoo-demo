@@ -6,8 +6,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Odoo Server 10.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2017-12-05 06:08+0000\n"
-"PO-Revision-Date: 2017-12-05 06:08+0000\n"
+"POT-Creation-Date: 2017-12-07 07:03+0000\n"
+"PO-Revision-Date: 2017-12-07 07:03+0000\n"
 "Last-Translator: <>\n"
 "Language-Team: \n"
 "MIME-Version: 1.0\n"
@@ -195,7 +195,6 @@ msgid "Approved"
 msgstr ""
 
 #. module: openeducat_core
-#: model:ir.model.fields,field_description:openeducat_core.field_op_faculty_session_ids
 #: model:ir.model.fields,field_description:openeducat_core.field_op_student_session_ids
 #: model:ir.model.fields,field_description:openeducat_core.field_res_users_session_ids
 msgid "Attended Sessions"
@@ -1460,6 +1459,11 @@ msgstr ""
 #: model:ir.model.fields,field_description:openeducat_core.field_op_faculty_self
 #: model:ir.model.fields,field_description:openeducat_core.field_op_student_self
 msgid "Self"
+msgstr ""
+
+#. module: openeducat_core
+#: model:ir.model.fields,field_description:openeducat_core.field_op_faculty_session_ids
+msgid "Sessions"
 msgstr ""
 
 #. module: openeducat_core
