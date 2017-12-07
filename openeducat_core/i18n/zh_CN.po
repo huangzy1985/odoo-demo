@@ -7,13 +7,13 @@ msgstr ""
 "Project-Id-Version: Odoo Server 10.0\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2016-10-13 11:17+0000\n"
-"PO-Revision-Date: 2017-12-06 14:44+0800\n"
+"PO-Revision-Date: 2017-12-07 14:38+0800\n"
 "Language-Team: \n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
-"X-Generator: Poedit 2.0.4\n"
+"X-Generator: Poedit 2.0.5\n"
 "Last-Translator: \n"
 "Language: zh_CN\n"
 
@@ -291,7 +291,7 @@ msgstr "取消"
 #: model:ir.actions.act_window,name:openeducat_core.act_open_op_category_view
 #: model:ir.ui.menu,name:openeducat_core.menu_op_category_sub
 msgid "Categories"
-msgstr "目录"
+msgstr "类别"
 
 #. module: openeducat_core
 #: model:ir.model.fields,field_description:openeducat_core.field_op_student_category_id
@@ -299,7 +299,7 @@ msgstr "目录"
 #: model:ir.ui.view,arch_db:openeducat_core.view_op_category_search
 #: model:ir.ui.view,arch_db:openeducat_core.view_op_category_tree
 msgid "Category"
-msgstr "目录"
+msgstr "类别"
 
 #. module: openeducat_core
 #: model:ir.model.fields,field_description:openeducat_core.field_op_faculty_channel_ids
@@ -439,7 +439,7 @@ msgstr "联系人的电子邮件数量计数器"
 #: model:ir.ui.view,arch_db:openeducat_core.view_op_faculty_form
 #: model:ir.ui.view,arch_db:openeducat_core.view_op_student_form
 msgid "Country"
-msgstr "国家"
+msgstr "国家/地区"
 
 #. module: openeducat_core
 #: model:ir.model.fields,field_description:openeducat_core.field_op_batch_course_id
@@ -628,7 +628,7 @@ msgstr "邮箱消息和通知"
 #: model:ir.model.fields,field_description:openeducat_core.field_op_faculty_emergency_contact
 #: model:ir.model.fields,field_description:openeducat_core.field_op_student_emergency_contact
 msgid "Emergency Contact"
-msgstr "紧急联系方式"
+msgstr "紧急联系人"
 
 #. module: openeducat_core
 #: model:ir.model,name:openeducat_core.model_hr_employee
@@ -1390,7 +1390,7 @@ msgstr "开始日期"
 #: model:ir.ui.view,arch_db:openeducat_core.view_op_faculty_form
 #: model:ir.ui.view,arch_db:openeducat_core.view_op_student_form
 msgid "State"
-msgstr "状态"
+msgstr "省份"
 
 #. module: openeducat_core
 #: model:ir.model.fields,field_description:openeducat_core.field_op_faculty_street
@@ -1636,7 +1636,7 @@ msgstr "时区补偿"
 #: model:ir.ui.view,arch_db:openeducat_core.view_op_faculty_form
 #: model:ir.ui.view,arch_db:openeducat_core.view_op_student_form
 msgid "Title"
-msgstr "标题"
+msgstr "称谓"
 
 #. module: openeducat_core
 #: model:ir.actions.act_window,help:openeducat_core.open_board_faculty
@@ -1771,7 +1771,7 @@ msgstr "供应商支付条款"
 #: model:ir.model.fields,field_description:openeducat_core.field_op_faculty_visa_info
 #: model:ir.model.fields,field_description:openeducat_core.field_op_student_visa_info
 msgid "Visa Info"
-msgstr "签证信息"
+msgstr "证件信息"
 
 #. module: openeducat_core
 #: model:ir.model.fields,field_description:openeducat_core.field_wizard_op_faculty_employee_user_boolean
@@ -1809,13 +1809,13 @@ msgstr ""
 #: model:ir.ui.view,arch_db:openeducat_core.view_op_faculty_form
 #: model:ir.ui.view,arch_db:openeducat_core.view_op_student_form
 msgid "ZIP"
-msgstr ""
+msgstr "邮政编码"
 
 #. module: openeducat_core
 #: model:ir.model.fields,field_description:openeducat_core.field_op_faculty_zip
 #: model:ir.model.fields,field_description:openeducat_core.field_op_student_zip
 msgid "Zip"
-msgstr ""
+msgstr "邮政编码"
 
 #. module: openeducat_core
 #: model:ir.model,name:openeducat_core.model_op_batch
