@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: Odoo Server 10.0\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2017-12-06 07:48+0000\n"
-"PO-Revision-Date: 2017-12-06 15:54+0800\n"
+"PO-Revision-Date: 2017-12-08 15:40+0800\n"
 "Language-Team: \n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -20,7 +20,7 @@ msgstr ""
 #. module: openeducat_parent
 #: model:ir.ui.view,arch_db:openeducat_parent.view_op_parent_form
 msgid "Create Parent User"
-msgstr "创建父用户"
+msgstr "创建家长用户"
 
 #. module: openeducat_parent
 #: model:ir.model.fields,field_description:openeducat_parent.field_op_parent_create_uid
@@ -55,7 +55,7 @@ msgid ""
 " Parent can not             create Subject Registration!"
 msgstr ""
 "无效的动作!\n"
-"父类不能创建科目注册！"
+"家长不能创建科目注册！"
 
 #. module: openeducat_parent
 #: code:addons/openeducat_parent/models/parent.py:149
@@ -65,7 +65,7 @@ msgid ""
 " Parent can not edit             Subject Registration!"
 msgstr ""
 "无效的动作!\n"
-"父类不能编辑科目注册！"
+"家长不能编辑科目注册！"
 
 #. module: openeducat_parent
 #: model:ir.model.fields,field_description:openeducat_parent.field_op_parent___last_update
@@ -86,7 +86,7 @@ msgstr "更新时间"
 #: model:ir.model.fields,field_description:openeducat_parent.field_op_parent_name
 #: model:ir.ui.view,arch_db:openeducat_parent.view_op_parent_search
 msgid "Name"
-msgstr "名称"
+msgstr "家长"
 
 #. module: openeducat_parent
 #: model:ir.model.fields,field_description:openeducat_parent.field_op_student_parent_ids
@@ -95,12 +95,12 @@ msgstr "名称"
 #: model:ir.ui.view,arch_db:openeducat_parent.view_op_parent_tree
 #: model:res.groups,name:openeducat_parent.group_op_parent
 msgid "Parent"
-msgstr "上级"
+msgstr "家长"
 
 #. module: openeducat_parent
 #: model:ir.ui.view,arch_db:openeducat_parent.view_op_parent_form
 msgid "Parent Name"
-msgstr "上级名称"
+msgstr "家长名称"
 
 #. module: openeducat_parent
 #: model:ir.actions.act_window,name:openeducat_parent.act_open_op_parent_view
@@ -108,7 +108,7 @@ msgstr "上级名称"
 #: model:ir.ui.menu,name:openeducat_parent.menu_op_parent_sub_parent
 #: model:ir.ui.view,arch_db:openeducat_parent.parent_student_form_view
 msgid "Parents"
-msgstr "上级"
+msgstr "家长"
 
 #. module: openeducat_parent
 #: model:ir.model.fields,field_description:openeducat_parent.field_op_parent_student_ids
@@ -127,7 +127,7 @@ msgstr "负责与此联系人通信的内部用户，如果有的话。"
 #: code:addons/openeducat_parent/models/parent.py:67
 #, python-format
 msgid "Update parent email id first."
-msgstr "首先更新上级邮件ID"
+msgstr "首先更新家长邮件ID"
 
 #. module: openeducat_parent
 #: model:ir.model.fields,field_description:openeducat_parent.field_op_parent_user_id
@@ -137,14 +137,14 @@ msgstr "用户"
 #. module: openeducat_parent
 #: model:ir.model,name:openeducat_parent.model_op_parent
 msgid "op.parent"
-msgstr "上级"
+msgstr ""
 
 #. module: openeducat_parent
 #: model:ir.model,name:openeducat_parent.model_op_student
 msgid "op.student"
-msgstr "学生"
+msgstr ""
 
 #. module: openeducat_parent
 #: model:ir.model,name:openeducat_parent.model_op_subject_registration
 msgid "op.subject.registration"
-msgstr "科目登记"
+msgstr ""

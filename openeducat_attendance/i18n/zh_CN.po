@@ -6,8 +6,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Odoo Server 10.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2015-09-29 11:02+0000\n"
-"PO-Revision-Date: 2017-12-05 17:03+0800\n"
+"POT-Creation-Date: 2017-12-07 07:26+0000\n"
+"PO-Revision-Date: 2017-12-08 09:37+0800\n"
 "Language-Team: \n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -18,142 +18,184 @@ msgstr ""
 "Language: zh_CN\n"
 
 #. module: openeducat_attendance
-#: view:op.all.student:openeducat_attendance.op_all_student_form
+#: model:ir.ui.menu,name:openeducat_attendance.menu_op_attendance_root
+msgid " Attendances"
+msgstr " 签到"
+
+#. module: openeducat_attendance
+#: model:ir.ui.view,arch_db:openeducat_attendance.student_attendance_report
+msgid "<b>From Date: </b>"
+msgstr "<b>开始日期: </b>"
+
+#. module: openeducat_attendance
+#: model:ir.ui.view,arch_db:openeducat_attendance.student_attendance_report
+msgid "<b>Student Name :</b>"
+msgstr "<b>学生姓名:</b>"
+
+#. module: openeducat_attendance
+#: model:ir.ui.view,arch_db:openeducat_attendance.student_attendance_report
+msgid "<b>To Date:</b>"
+msgstr "<b>结束日期: </b>"
+
+#. module: openeducat_attendance
+#: model:ir.ui.view,arch_db:openeducat_attendance.student_attendance_report
+msgid "<b>Total Absence</b>"
+msgstr "<b>缺席人数</b>"
+
+#. module: openeducat_attendance
+#: model:ir.ui.view,arch_db:openeducat_attendance.student_attendance_report
+msgid "<strong>Student Attendance Detail</strong>"
+msgstr "学生签到详情"
+
+#. module: openeducat_attendance
+#: model:ir.ui.view,arch_db:openeducat_attendance.op_all_student_form
 msgid "Add Absent Student(s)"
 msgstr "添加缺席学生"
 
 #. module: openeducat_attendance
-#: view:op.all.student:openeducat_attendance.op_all_student_form
-#: field:op.all.student,student_ids:0
+#: model:ir.model.fields,field_description:openeducat_attendance.field_op_all_student_student_ids
+#: model:ir.ui.view,arch_db:openeducat_attendance.op_all_student_form
 msgid "Add Student(s)"
 msgstr "添加学生"
 
 #. module: openeducat_attendance
 #: model:ir.actions.act_window,name:openeducat_attendance.op_all_student_act
 msgid "Attandance Sheet Import"
-msgstr "签到表导入"
+msgstr "导入签到表"
 
 #. module: openeducat_attendance
-#: model:ir.ui.menu,name:openeducat_attendance.menu_op_attendance_main
-#: view:op.attendance.line:openeducat_attendance.view_op_attendance_line_search
-#: field:op.attendance.line,attendance_id:0
+#: model:ir.ui.view,arch_db:openeducat_attendance.view_op_attendance_line_search
 msgid "Attendance"
 msgstr "签到"
 
 #. module: openeducat_attendance
 #: model:ir.actions.act_window,name:openeducat_attendance.act_open_op_attendance_line_view
-#: view:op.attendance.line:openeducat_attendance.view_op_attendance_line_form
-#: view:op.attendance.line:openeducat_attendance.view_op_attendance_line_search
-#: view:op.attendance.line:openeducat_attendance.view_op_attendance_line_tree
-#: view:op.attendance.sheet:openeducat_attendance.view_op_attendance_sheet_form
-#: field:op.attendance.sheet,attendance_line:0
+#: model:ir.model.fields,field_description:openeducat_attendance.field_op_attendance_sheet_attendance_line
+#: model:ir.ui.view,arch_db:openeducat_attendance.view_op_attendance_line_form
+#: model:ir.ui.view,arch_db:openeducat_attendance.view_op_attendance_line_search
+#: model:ir.ui.view,arch_db:openeducat_attendance.view_op_attendance_line_tree
+#: model:ir.ui.view,arch_db:openeducat_attendance.view_op_attendance_sheet_form
 msgid "Attendance Line"
 msgstr "签到情况"
 
 #. module: openeducat_attendance
-#: view:op.attendance.register:openeducat_attendance.view_op_attendance_register_form
-#: view:op.attendance.register:openeducat_attendance.view_op_attendance_register_search
-#: view:op.attendance.register:openeducat_attendance.view_op_attendance_register_tree
+#: model:ir.ui.view,arch_db:openeducat_attendance.view_op_attendance_register_form
+#: model:ir.ui.view,arch_db:openeducat_attendance.view_op_attendance_register_search
+#: model:ir.ui.view,arch_db:openeducat_attendance.view_op_attendance_register_tree
 msgid "Attendance Register"
-msgstr "签到登记"
+msgstr "签到簿"
 
 #. module: openeducat_attendance
 #: model:ir.actions.act_window,name:openeducat_attendance.act_open_op_attendance_register_view
 #: model:ir.ui.menu,name:openeducat_attendance.menu_op_attendance_register_sub
-#: model:ir.ui.menu,name:openeducat_attendance.menu_op_attendance_register_sub_faculty
 msgid "Attendance Registers"
-msgstr "签到登记"
+msgstr "签到簿"
 
 #. module: openeducat_attendance
-#: view:op.attendance.sheet:openeducat_attendance.view_op_attendance_sheet_form
-#: view:op.attendance.sheet:openeducat_attendance.view_op_attendance_sheet_search
-#: view:op.attendance.sheet:openeducat_attendance.view_op_attendance_sheet_tree
+#: model:ir.model.fields,field_description:openeducat_attendance.field_op_attendance_line_attendance_id
+#: model:ir.ui.view,arch_db:openeducat_attendance.view_op_attendance_sheet_form
+#: model:ir.ui.view,arch_db:openeducat_attendance.view_op_attendance_sheet_search
+#: model:ir.ui.view,arch_db:openeducat_attendance.view_op_attendance_sheet_tree
 msgid "Attendance Sheet"
-msgstr "签到表"
+msgstr "签到页"
 
 #. module: openeducat_attendance
 #: model:ir.actions.act_window,name:openeducat_attendance.act_open_op_attendance_sheet_view
 #: model:ir.ui.menu,name:openeducat_attendance.menu_op_attendance_sheet_sub
-#: model:ir.ui.menu,name:openeducat_attendance.menu_op_attendance_sheet_sub_faculty
 msgid "Attendance Sheets"
-msgstr "签到表"
+msgstr "签到页"
 
 #. module: openeducat_attendance
 #: model:ir.ui.menu,name:openeducat_attendance.menu_op_attendance_line_sub
 msgid "Attendance lines"
-msgstr "签到情况"
+msgstr "签到一览"
 
 #. module: openeducat_attendance
-#: field:op.all.student,batch_id:0
-#: view:op.attendance.line:openeducat_attendance.view_op_attendance_line_search
-#: field:op.attendance.line,batch_id:0
-#: view:op.attendance.register:openeducat_attendance.view_op_attendance_register_search
-#: field:op.attendance.register,batch_id:0
+#: model:ir.model.fields,field_description:openeducat_attendance.field_op_all_student_batch_id
+#: model:ir.model.fields,field_description:openeducat_attendance.field_op_attendance_line_batch_id
+#: model:ir.model.fields,field_description:openeducat_attendance.field_op_attendance_register_batch_id
+#: model:ir.model.fields,field_description:openeducat_attendance.field_op_attendance_sheet_batch_id
+#: model:ir.ui.view,arch_db:openeducat_attendance.view_op_attendance_line_search
+#: model:ir.ui.view,arch_db:openeducat_attendance.view_op_attendance_register_search
 msgid "Batch"
-msgstr "批处理"
+msgstr "批次"
 
 #. module: openeducat_attendance
-#: view:student.attendance:openeducat_attendance.student_attendance_form
+#: model:ir.ui.view,arch_db:openeducat_attendance.student_attendance_form
 msgid "Close"
 msgstr "关闭"
 
 #. module: openeducat_attendance
-#: view:op.attendance.register:openeducat_attendance.view_op_attendance_register_search
-#: field:op.attendance.register,code:0
+#: model:ir.model.fields,field_description:openeducat_attendance.field_op_attendance_register_code
+#: model:ir.ui.view,arch_db:openeducat_attendance.view_op_attendance_register_search
 msgid "Code"
 msgstr "代码"
 
 #. module: openeducat_attendance
-#: view:op.all.student:openeducat_attendance.op_all_student_form
+#: sql_constraint:op.attendance.register:0
+msgid "Code should be unique per attendance register!"
+msgstr "每个签到记录的代码必须唯一!"
+
+#. module: openeducat_attendance
+#: model:ir.ui.view,arch_db:openeducat_attendance.op_all_student_form
 msgid "Confirm Student Selection"
 msgstr "批准学生选项"
 
 #. module: openeducat_attendance
-#: field:op.all.student,course_id:0
-#: view:op.attendance.line:openeducat_attendance.view_op_attendance_line_search
-#: field:op.attendance.line,course_id:0
-#: view:op.attendance.register:openeducat_attendance.view_op_attendance_register_search
-#: field:op.attendance.register,course_id:0
+#: model:ir.model.fields,field_description:openeducat_attendance.field_op_all_student_course_id
+#: model:ir.model.fields,field_description:openeducat_attendance.field_op_attendance_line_course_id
+#: model:ir.model.fields,field_description:openeducat_attendance.field_op_attendance_register_course_id
+#: model:ir.model.fields,field_description:openeducat_attendance.field_op_attendance_sheet_course_id
+#: model:ir.ui.view,arch_db:openeducat_attendance.view_op_attendance_line_search
+#: model:ir.ui.view,arch_db:openeducat_attendance.view_op_attendance_register_search
 msgid "Course"
 msgstr "课程"
 
 #. module: openeducat_attendance
-#: field:op.all.student,create_uid:0 field:op.attendance.line,create_uid:0
-#: field:op.attendance.register,create_uid:0
-#: field:op.attendance.sheet,create_uid:0 field:student.attendance,create_uid:0
+#: model:ir.model.fields,field_description:openeducat_attendance.field_op_all_student_create_uid
+#: model:ir.model.fields,field_description:openeducat_attendance.field_op_attendance_line_create_uid
+#: model:ir.model.fields,field_description:openeducat_attendance.field_op_attendance_register_create_uid
+#: model:ir.model.fields,field_description:openeducat_attendance.field_op_attendance_sheet_create_uid
+#: model:ir.model.fields,field_description:openeducat_attendance.field_student_attendance_create_uid
 msgid "Created by"
 msgstr "创建人"
 
 #. module: openeducat_attendance
-#: field:op.all.student,create_date:0 field:op.attendance.line,create_date:0
-#: field:op.attendance.register,create_date:0
-#: field:op.attendance.sheet,create_date:0
-#: field:student.attendance,create_date:0
+#: model:ir.model.fields,field_description:openeducat_attendance.field_op_all_student_create_date
+#: model:ir.model.fields,field_description:openeducat_attendance.field_op_attendance_line_create_date
+#: model:ir.model.fields,field_description:openeducat_attendance.field_op_attendance_register_create_date
+#: model:ir.model.fields,field_description:openeducat_attendance.field_op_attendance_sheet_create_date
+#: model:ir.model.fields,field_description:openeducat_attendance.field_student_attendance_create_date
 msgid "Created on"
 msgstr "创建时间"
 
 #. module: openeducat_attendance
-#: field:op.attendance.line,attendance_date:0
-#: view:op.attendance.sheet:openeducat_attendance.view_op_attendance_sheet_search
-#: field:op.attendance.sheet,attendance_date:0
-#: view:website:openeducat_attendance.student_attendance_report
+#: model:ir.model.fields,field_description:openeducat_attendance.field_op_attendance_line_attendance_date
+#: model:ir.model.fields,field_description:openeducat_attendance.field_op_attendance_sheet_attendance_date
+#: model:ir.ui.view,arch_db:openeducat_attendance.student_attendance_report
+#: model:ir.ui.view,arch_db:openeducat_attendance.view_op_attendance_sheet_search
 msgid "Date"
 msgstr "日期"
 
 #. module: openeducat_attendance
-#: field:op.attendance.sheet,faculty_id:0
-msgid "Faculty"
-msgstr "教员？"
+#: model:ir.model.fields,field_description:openeducat_attendance.field_op_all_student_display_name
+#: model:ir.model.fields,field_description:openeducat_attendance.field_op_attendance_line_display_name
+#: model:ir.model.fields,field_description:openeducat_attendance.field_op_attendance_register_display_name
+#: model:ir.model.fields,field_description:openeducat_attendance.field_op_attendance_sheet_display_name
+#: model:ir.model.fields,field_description:openeducat_attendance.field_report_openeducat_attendance_student_attendance_report_display_name
+#: model:ir.model.fields,field_description:openeducat_attendance.field_student_attendance_display_name
+msgid "Display Name"
+msgstr "显示名称"
 
 #. module: openeducat_attendance
-#: field:student.attendance,from_date:0
+#: model:ir.model.fields,field_description:openeducat_attendance.field_op_attendance_sheet_faculty_id
+msgid "Faculty"
+msgstr "教员"
+
+#. module: openeducat_attendance
+#: model:ir.model.fields,field_description:openeducat_attendance.field_student_attendance_from_date
 msgid "From Date"
 msgstr "日期(从)"
-
-#. module: openeducat_attendance
-#: view:website:openeducat_attendance.student_attendance_report
-msgid "From Date:"
-msgstr "日期(从):"
 
 #. module: openeducat_attendance
 #: model:ir.actions.report.xml,name:openeducat_attendance.action_report_student_attendance
@@ -161,106 +203,168 @@ msgid "Generate Attendance"
 msgstr "生成签到"
 
 #. module: openeducat_attendance
-#: view:op.attendance.line:openeducat_attendance.view_op_attendance_line_search
-#: view:op.attendance.register:openeducat_attendance.view_op_attendance_register_search
-#: view:op.attendance.sheet:openeducat_attendance.view_op_attendance_sheet_search
+#: model:ir.ui.view,arch_db:openeducat_attendance.view_op_attendance_line_search
+#: model:ir.ui.view,arch_db:openeducat_attendance.view_op_attendance_register_search
+#: model:ir.ui.view,arch_db:openeducat_attendance.view_op_attendance_sheet_search
 msgid "Group By..."
 msgstr "分组..."
 
 #. module: openeducat_attendance
-#: field:op.all.student,id:0 field:op.attendance.line,id:0
-#: field:op.attendance.register,id:0 field:op.attendance.sheet,id:0
-#: field:report.openeducat_attendance.student_attendance_report,id:0
-#: field:student.attendance,id:0
+#: model:ir.model.fields,field_description:openeducat_attendance.field_op_all_student_id
+#: model:ir.model.fields,field_description:openeducat_attendance.field_op_attendance_line_id
+#: model:ir.model.fields,field_description:openeducat_attendance.field_op_attendance_register_id
+#: model:ir.model.fields,field_description:openeducat_attendance.field_op_attendance_sheet_id
+#: model:ir.model.fields,field_description:openeducat_attendance.field_report_openeducat_attendance_student_attendance_report_id
+#: model:ir.model.fields,field_description:openeducat_attendance.field_student_attendance_id
 msgid "ID"
-msgstr ""
+msgstr "ID"
 
 #. module: openeducat_attendance
-#: field:op.all.student,write_uid:0 field:op.attendance.line,write_uid:0
-#: field:op.attendance.register,write_uid:0
-#: field:op.attendance.sheet,write_uid:0 field:student.attendance,write_uid:0
+#: model:ir.model.fields,field_description:openeducat_attendance.field_op_all_student___last_update
+#: model:ir.model.fields,field_description:openeducat_attendance.field_op_attendance_line___last_update
+#: model:ir.model.fields,field_description:openeducat_attendance.field_op_attendance_register___last_update
+#: model:ir.model.fields,field_description:openeducat_attendance.field_op_attendance_sheet___last_update
+#: model:ir.model.fields,field_description:openeducat_attendance.field_report_openeducat_attendance_student_attendance_report___last_update
+#: model:ir.model.fields,field_description:openeducat_attendance.field_student_attendance___last_update
+msgid "Last Modified on"
+msgstr "修改时间"
+
+#. module: openeducat_attendance
+#: model:ir.model.fields,field_description:openeducat_attendance.field_op_all_student_write_uid
+#: model:ir.model.fields,field_description:openeducat_attendance.field_op_attendance_line_write_uid
+#: model:ir.model.fields,field_description:openeducat_attendance.field_op_attendance_register_write_uid
+#: model:ir.model.fields,field_description:openeducat_attendance.field_op_attendance_sheet_write_uid
+#: model:ir.model.fields,field_description:openeducat_attendance.field_student_attendance_write_uid
 msgid "Last Updated by"
 msgstr "更新人"
 
 #. module: openeducat_attendance
-#: field:op.all.student,write_date:0 field:op.attendance.line,write_date:0
-#: field:op.attendance.register,write_date:0
-#: field:op.attendance.sheet,write_date:0 field:student.attendance,write_date:0
+#: model:ir.model.fields,field_description:openeducat_attendance.field_op_all_student_write_date
+#: model:ir.model.fields,field_description:openeducat_attendance.field_op_attendance_line_write_date
+#: model:ir.model.fields,field_description:openeducat_attendance.field_op_attendance_register_write_date
+#: model:ir.model.fields,field_description:openeducat_attendance.field_op_attendance_sheet_write_date
+#: model:ir.model.fields,field_description:openeducat_attendance.field_student_attendance_write_date
 msgid "Last Updated on"
 msgstr "更新时间"
 
 #. module: openeducat_attendance
-#: view:op.attendance.register:openeducat_attendance.view_op_attendance_register_search
-#: field:op.attendance.register,name:0 field:op.attendance.sheet,name:0
+#: model:ir.model.fields,field_description:openeducat_attendance.field_op_attendance_register_name
+#: model:ir.model.fields,field_description:openeducat_attendance.field_op_attendance_sheet_name
+#: model:ir.ui.view,arch_db:openeducat_attendance.view_op_attendance_register_search
 msgid "Name"
 msgstr "名称"
 
 #. module: openeducat_attendance
-#: view:op.attendance.line:openeducat_attendance.view_op_attendance_line_search
-#: field:op.attendance.line,present:0
+#: model:ir.model.fields,field_description:openeducat_attendance.field_op_attendance_line_present
+#: model:ir.ui.view,arch_db:openeducat_attendance.view_op_attendance_line_search
 msgid "Present ?"
-msgstr "出席 ?"
+msgstr "出席 ？"
 
 #. module: openeducat_attendance
-#: view:op.attendance.sheet:openeducat_attendance.view_op_attendance_sheet_search
-#: field:op.attendance.sheet,register_id:0
+#: model:ir.ui.view,arch_db:openeducat_attendance.student_attendance_form
+msgid "Print"
+msgstr "打印"
+
+#. module: openeducat_attendance
+#: model:ir.model.fields,field_description:openeducat_attendance.field_op_attendance_sheet_register_id
+#: model:ir.ui.view,arch_db:openeducat_attendance.view_op_attendance_sheet_search
 msgid "Register"
-msgstr "登记"
+msgstr "登记簿"
 
 #. module: openeducat_attendance
-#: field:op.attendance.line,remark:0
-#: view:website:openeducat_attendance.student_attendance_report
+#: model:ir.model.fields,field_description:openeducat_attendance.field_op_attendance_line_remark
+#: model:ir.ui.view,arch_db:openeducat_attendance.student_attendance_report
 msgid "Remark"
 msgstr "备注"
 
 #. module: openeducat_attendance
-#: view:op.attendance.line:openeducat_attendance.view_op_attendance_line_search
-#: field:op.attendance.line,student_id:0
+#: model:ir.model.fields,field_description:openeducat_attendance.field_op_attendance_sheet_session_id
+msgid "Session"
+msgstr "周期"
+
+#. module: openeducat_attendance
+#: sql_constraint:op.attendance.sheet:0
+msgid "Sheet must be unique per Register/Session."
+msgstr "每个签到簿/周期的页必须是唯一的."
+
+#. module: openeducat_attendance
+#: model:ir.model.fields,field_description:openeducat_attendance.field_op_attendance_line_student_id
+#: model:ir.ui.view,arch_db:openeducat_attendance.view_op_attendance_line_search
 msgid "Student"
 msgstr "学生"
 
 #. module: openeducat_attendance
 #: model:ir.actions.act_window,name:openeducat_attendance.student_attendance_act
-#: view:student.attendance:openeducat_attendance.student_attendance_form
 msgid "Student Attendance"
 msgstr "学生签到"
 
 #. module: openeducat_attendance
-#: view:website:openeducat_attendance.student_attendance_report
-msgid "Student Attendance Detail"
-msgstr "学生签到详情"
+#: model:ir.ui.view,arch_db:openeducat_attendance.student_attendance_form
+msgid "Student Attendance Report"
+msgstr "学生签到报告"
 
 #. module: openeducat_attendance
-#: view:student.attendance:openeducat_attendance.student_attendance_form
-msgid "Student Attendance Report Between These Dates"
-msgstr "最近几天前的学生签到报告"
+#: sql_constraint:op.attendance.line:0
+msgid "Student must be unique per Attendance."
+msgstr "每个签到记录只能有一名学生."
 
 #. module: openeducat_attendance
-#: view:website:openeducat_attendance.student_attendance_report
-msgid "Student Name :"
-msgstr "学生名称:"
-
-#. module: openeducat_attendance
-#: view:op.attendance.sheet:openeducat_attendance.view_op_attendance_sheet_form
+#: model:ir.ui.view,arch_db:openeducat_attendance.view_op_attendance_sheet_form
 msgid "Students"
 msgstr "学生"
 
 #. module: openeducat_attendance
-#: field:op.attendance.register,subject_id:0
+#: model:ir.model.fields,field_description:openeducat_attendance.field_op_attendance_register_subject_id
 msgid "Subject"
 msgstr "科目"
 
 #. module: openeducat_attendance
-#: field:student.attendance,to_date:0
+#: model:ir.model.fields,field_description:openeducat_attendance.field_student_attendance_to_date
 msgid "To Date"
 msgstr "日期(至)"
 
 #. module: openeducat_attendance
-#: view:website:openeducat_attendance.student_attendance_report
-msgid "To Date:"
-msgstr "日期(至):"
+#: code:addons/openeducat_attendance/wizards/student_attendance_wizard.py:42
+#, python-format
+msgid "To Date cannot be set before From Date."
+msgstr "结束日期不能早于开始日期."
 
 #. module: openeducat_attendance
-#: view:website:openeducat_attendance.student_attendance_report
-msgid "Total Absence"
-msgstr "缺席总数"
+#: model:ir.model.fields,field_description:openeducat_attendance.field_op_attendance_sheet_total_absent
+msgid "Total Absent"
+msgstr "缺席人数"
+
+#. module: openeducat_attendance
+#: model:ir.model.fields,field_description:openeducat_attendance.field_op_attendance_sheet_total_present
+msgid "Total Present"
+msgstr "出席人数"
+
+#. module: openeducat_attendance
+#: model:ir.model,name:openeducat_attendance.model_op_all_student
+msgid "op.all.student"
+msgstr ""
+
+#. module: openeducat_attendance
+#: model:ir.model,name:openeducat_attendance.model_op_attendance_line
+msgid "op.attendance.line"
+msgstr ""
+
+#. module: openeducat_attendance
+#: model:ir.model,name:openeducat_attendance.model_op_attendance_register
+msgid "op.attendance.register"
+msgstr ""
+
+#. module: openeducat_attendance
+#: model:ir.model,name:openeducat_attendance.model_op_attendance_sheet
+msgid "op.attendance.sheet"
+msgstr ""
+
+#. module: openeducat_attendance
+#: model:ir.model,name:openeducat_attendance.model_report_openeducat_attendance_student_attendance_report
+msgid "report.openeducat_attendance.student_attendance_report"
+msgstr ""
+
+#. module: openeducat_attendance
+#: model:ir.model,name:openeducat_attendance.model_student_attendance
+msgid "student.attendance"
+msgstr ""
