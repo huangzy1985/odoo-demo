@@ -1,4 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
+<!--
+mofify history
+
+    2017/12/29 #6 zhoujiang
+
+
+-->
 <odoo>
     <data>
         <record model="ir.ui.view" id="kanban_view_student">
@@ -19,12 +26,13 @@
                                     <h4>
                                         <a type="open">
                                             <field name="name" />
-                                            <t t-if="record.middle_name.raw_value">
+                                            <!-- #6 del -->
+                                            <!--t t-if="record.middle_name.raw_value">
                                                 <field name="middle_name" />
                                             </t>
                                             <t t-if="record.last_name.raw_value">
                                                 <field name="last_name" />
-                                            </t>
+                                            </t-->
                                         </a>
                                     </h4>
                                     <ul>
@@ -45,10 +53,11 @@
                                                 <field name="email" />
                                             </a>
                                         </li>
-                                        <li t-if="record.lang.raw_value">
+                                        <!-- #6 del -->
+                                        <!--li t-if="record.lang.raw_value">
                                             Language:
                                             <field name="lang" />
-                                        </li>
+                                        </li-->
                                     </ul>
                                 </div>
                             </div>
@@ -68,14 +77,20 @@
             <field name="priority" eval="8" />
             <field name="arch" type="xml">
                 <tree string="Student">
-                    <field name="title" />
+                    <!-- #6 add -->
+                    <field name="id" />
                     <field name="name" />
+                    <field name="gender" />
+                    <field name="birth_date" />
+                    <field name="phone" />
+                    <field name="street" />
+                    <field name="create_date" />
+                    <!-- #6 del -->
+                    <!--field name="nationality" />
                     <field name="middle_name" />
                     <field name="last_name" />
                     <field name="blood_group" />
-                    <field name="emergency_contact" />
-                    <field name="nationality" />
-                    <field name="lang" />
+                    <field name="lang" /-->
                 </tree>
             </field>
         </record>
@@ -100,29 +115,40 @@
                                 <table>
                                     <tr>
                                         <td style="padding-right:10px;"><field name="name" required="1" placeholder="First Name" /></td>
-                                        <td style="padding-right:10px;"><field name="middle_name" placeholder="Middle Name" /></td>
-                                        <td style="padding-right:10px;"><field name="last_name" placeholder="Last Name" required="1" /></td>
+                                        <!--#6 del-->
+                                        <!--td style="padding-right:10px;"><field name="middle_name" placeholder="Middle Name" /></td>
+                                        <td style="padding-right:10px;"><field name="last_name" placeholder="Last Name" required="1" /></td-->
                                     </tr>
                                 </table>
                             </h1>
                         </div>
+                        <!--#6 add-->
+                        <group col="6" colspan="4">
+                            <field name="id" />
+                            <field name="phone" />
+                            <field name="email" />
+                        </group>
                         <notebook colspan="4">
                             <page name="personal_information"
                                 string="Personal Information">
                                 <group col="4" colspan="4"
                                     name="personal_detail">
+                                    <!-- #6 del-->
                                     <field name="gender" required="1" />
                                     <field name="birth_date" required="1" />
-                                    <field name="nationality" />
-                                    <field name="visa_info" />
-                                    <field name="lang" />
-                                    <field name="blood_group" />
+                                    <field name="user_id" string="User" readonly="1"/>
+                                    <!--field name="email" required="1" /-->
+                                    <!-- #6 add-->
+                                    <field name="wx_no" />
+                                    <!--field name="nationality" /-->
+                                    <!--field name="visa_info" /-->
+                                    <!--field name="lang" /-->
+                                    <!--field name="blood_group" /-->
                                     <field name="category_id" />
                                     <field name="emergency_contact"
                                         context="{'show_address': 1}"
                                         options='{"always_reload": True}' />
-                                    <field name="user_id" string="User" readonly="1"/>
-                                    <field name="email" required="1" />
+                                    <field name="base_info" />
                                 </group>
                                 <group string="Address Detail"
                                     name="address">
@@ -135,8 +161,9 @@
                                     <div name="div_address">
                                         <field name="street"
                                             placeholder="Street..." />
-                                        <field name="street2"
-                                            placeholder="Street2" />
+                                        <!-- #6 del-->
+                                        <!--field name="street2"
+                                            placeholder="Street2" /-->
                                         <div class="address_format">
                                             <field name="city"
                                                 placeholder="City"
@@ -150,9 +177,9 @@
                                                 placeholder="ZIP"
                                                 style="width: 20%%" />
                                         </div>
-                                        <field name="country_id"
+                                        <!--field name="country_id"
                                             placeholder="Country" class="oe_no_button"
-                                            options='{"no_open": True}' />
+                                            options='{"no_open": True}' /-->
                                     </div>
                                 </group>
                             </page>
@@ -196,15 +223,22 @@
             <field name="arch" type="xml">
                 <search string="Student">
                     <field name="name" />
-                    <field name="blood_group" />
+                    <!-- #6 add-->
+                    <field name="phone" />
+                    <field name="street" />
+                    <!--field name="blood_group" /-->
                     <newline />
                     <group expand="0" string="Group By...">
-                        <filter name="blood_group" string="Blood Group"
+                        <!-- #6 add-->
+                        <filter name="gender" string="性别"
+                            domain="[]" context="{'group_by':'gender'}" />
+                        <!-- #6 del-->
+                        <!--filter name="blood_group" string="Blood Group"
                             domain="[]" context="{'group_by':'blood_group'}" />
                         <filter name="nationality" string="Nationality"
                             domain="[]" context="{'group_by':'nationality'}" />
                         <filter name="language" string="Language"
-                            domain="[]" context="{'group_by':'lang'}" />
+                            domain="[]" context="{'group_by':'lang'}" /-->
                     </group>
                 </search>
             </field>
