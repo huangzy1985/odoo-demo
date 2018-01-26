@@ -12,6 +12,7 @@
                     <field name="start_date" />
                     <field name="end_date" />
                     <field name="course_id" />
+                    <field name="campus_id" />
                 </tree>
             </field>
         </record>
@@ -27,7 +28,9 @@
                             <field name="code" />
                             <field name="start_date" />
                             <field name="end_date" />
-                            <field name="course_id" />
+                            <field name="campus_id" />
+                            <field name="course_id"  />
+                            <field name="state" />
                         </group>
                     </sheet>
                 </form>

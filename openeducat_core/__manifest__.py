@@ -20,7 +20,7 @@
 ###############################################################################
 
 {
-    'name': 'OpenEduCat Core',
+    'name': 'OpenEduCat Core ',
     'version': '10.0.3.0.0',
     'license': 'LGPL-3',
     'category': 'Education',
@@ -43,6 +43,7 @@
         'views/hr_view.xml',
         'views/category_view.xml',
         'views/course_view.xml',
+        'views/campus_view.xml',
         'views/batch_view.xml',
         'views/subject_view.xml',
         'views/faculty_view.xml',

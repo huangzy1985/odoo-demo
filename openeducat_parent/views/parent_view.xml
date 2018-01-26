@@ -42,6 +42,13 @@
                     <sheet>
                         <group col="4">
                             <field name="name" placeholder="Parent Name" />
+                            <field name="gender" />
+                            <field name="phone" />
+                            <field name="mobile" />
+                            <field name="email" />
+                            <field name="wx_no" />
+                            <field name="base_info" />
+                            <field name="company" />
                             <field name="user_id" readonly="1" />
                         </group>
                         <separator colspan="4" string="Student(s)" />
