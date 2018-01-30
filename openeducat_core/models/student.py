@@ -19,6 +19,10 @@
 #
 ###############################################################################
 
+#    mofify history
+#    20171229 #6 zhoujiang
+
+
 from odoo import models, fields, api, _
 from odoo.exceptions import ValidationError
 
@@ -72,6 +76,10 @@ class OpStudent(models.Model):
     category_id = fields.Many2one('op.category', 'Category')
     course_detail_ids = fields.One2many('op.student.course', 'student_id',
                                         'Course Details')
+    # 6 add
+    wx_no = fields.Char('微信号', size=32) 
+    base_info = fields.Char('教育背景', size=256) 
+
 
     @api.multi
     @api.constrains('birth_date')
