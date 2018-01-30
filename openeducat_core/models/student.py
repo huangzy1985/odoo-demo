@@ -79,7 +79,6 @@ class OpStudent(models.Model):
     # 6 add
     wx_no = fields.Char('微信号', size=32) 
     base_info = fields.Char('教育背景', size=256) 
-    school_info = fields.Char('就读学校',size=256)
 
 
     @api.multi

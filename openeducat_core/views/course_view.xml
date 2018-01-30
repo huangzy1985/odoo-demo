@@ -9,12 +9,9 @@
                 <tree string="Course">
                     <field name="name" />
                     <field name="code" />
-                    <!--<field name="section" />-->
-                    <!--<field name="evaluation_type" />-->
+                    <field name="section" />
+                    <field name="evaluation_type" />
                     <field name="parent_id" />
-                     <field name="price" />
-                     <field name="state" />
-                    <field name="campus_ids" />
                     <field name="subject_ids" />
                 </tree>
             </field>
@@ -29,22 +26,15 @@
                         <group colspan="4" col="4" name="main">
                             <field name="name" />
                             <field name="code" />
-                            <!--<field name="section" />-->
-                            <!--<field name="evaluation_type" />-->
+                            <field name="section" />
+                            <field name="evaluation_type" />
                             <field name="parent_id" />
-                            <!--<field name="min_unit_load"/>-->
-                            <!--<field name="max_unit_load"/>-->
-                            <field name="price" />
-                            <field name="state" />
+                            <field name="min_unit_load"/>
+                            <field name="max_unit_load"/>
                         </group>
-                        <notebook colspan="4">
-                            <page name="subject" string="Subjects">
-                                    <field name="subject_ids" colspan="4" nolabel="1" />
-                            </page>
-                            <page name="校区" string="校区">
-                                    <field name="campus_ids" colspan="4" nolabel="1" />
-                            </page>
-                        </notebook>
+                        <group string="Subjects" name="subject">
+                            <field name="subject_ids" nolabel="1"/>
+                        </group>
                     </sheet>
                 </form>
             </field>

@@ -27,17 +27,6 @@ class OpParent(models.Model):
     _name = 'op.parent'
 
     name = fields.Many2one('res.partner', 'Name', required=True)
-    gender = fields.Selection(
-        [('male', '男'), ('female', '女')], '性别', required=True)
-
-    wx_no = fields.Char('微信号', size=32)
-    base_info = fields.Char('教育背景', size=256)
-    phone = fields.Char('电话',size=32)
-    mobile = fields.Char('手机',size=32)
-    company = fields.Char('工作单位',size=256)
-    email = fields.Char('Email',size=64)
-
-
     user_id = fields.Many2one('res.users', related='name.user_id',
                               string='User', store=True)
     student_ids = fields.Many2many('op.student', string='Student(s)')

@@ -125,11 +125,8 @@ mofify history
                         <!--#6 add-->
                         <group col="6" colspan="4">
                             <field name="id" />
-                            <field name="gender" required="1" />
                             <field name="phone" />
-                            <field name="mobile" />
                             <field name="email" />
-                            <field name="wx_no" />
                         </group>
                         <notebook colspan="4">
                             <page name="personal_information"
@@ -137,12 +134,12 @@ mofify history
                                 <group col="4" colspan="4"
                                     name="personal_detail">
                                     <!-- #6 del-->
-
+                                    <field name="gender" required="1" />
                                     <field name="birth_date" required="1" />
                                     <field name="user_id" string="User" readonly="1"/>
                                     <!--field name="email" required="1" /-->
                                     <!-- #6 add-->
-
+                                    <field name="wx_no" />
                                     <!--field name="nationality" /-->
                                     <!--field name="visa_info" /-->
                                     <!--field name="lang" /-->
@@ -152,7 +149,6 @@ mofify history
                                         context="{'show_address': 1}"
                                         options='{"always_reload": True}' />
                                     <field name="base_info" />
-                                    <field name="school_info" />
                                 </group>
                                 <group string="Address Detail"
                                     name="address">
@@ -163,25 +159,24 @@ mofify history
                                     </div>
                                     <label for="street" string="Address" />
                                     <div name="div_address">
-
+                                        <field name="street"
+                                            placeholder="Street..." />
                                         <!-- #6 del-->
                                         <!--field name="street2"
                                             placeholder="Street2" /-->
                                         <div class="address_format">
+                                            <field name="city"
+                                                placeholder="City"
+                                                style="width: 40%%" />
                                             <field name="state_id"
                                                 class="oe_no_button"
                                                 placeholder="State"
                                                 style="width: 37%%"
                                                 options='{"no_open": True}' />
-                                            <field name="city"
-                                                placeholder="City"
-                                                style="width: 40%%" />
                                             <field name="zip"
                                                 placeholder="ZIP"
                                                 style="width: 20%%" />
                                         </div>
-                                        <field name="street"
-                                            placeholder="Street..." />
                                         <!--field name="country_id"
                                             placeholder="Country" class="oe_no_button"
                                             options='{"no_open": True}' /-->

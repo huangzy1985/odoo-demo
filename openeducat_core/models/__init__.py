@@ -22,7 +22,6 @@
 from . import batch
 from . import category
 from . import course
-from . import campus
 from . import faculty
 from . import hr
 from . import res_company
