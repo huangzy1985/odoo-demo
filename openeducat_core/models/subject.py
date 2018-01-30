@@ -29,6 +29,12 @@ class OpSubject(models.Model):
     code = fields.Char('Code', size=256, required=True)
     course_id = fields.Many2one('op.course', 'Course')
     grade_weightage = fields.Float('Grade Weightage')
+    period = fields.Integer('学时')
+
+    state = fields.Selection(
+        [('1', '启用'), ('0', '停用')],
+        '启用状态', default="1", required=True)
+
     type = fields.Selection(
         [('theory', 'Theory'), ('practical', 'Practical'),
          ('both', 'Both'), ('other', 'Other')],

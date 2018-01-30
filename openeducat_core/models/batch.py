@@ -32,6 +32,10 @@ class OpBatch(models.Model):
         'Start Date', required=True, default=fields.Date.today())
     end_date = fields.Date('End Date', required=True)
     course_id = fields.Many2one('op.course', 'Course', required=True)
+    campus_id = fields.Many2one('op.campus','校区',required = True)
+    state = fields.Selection(
+        [('1', '未开班'), ('2', '开班中'),('3','已结班')],
+        '班级状态', default="1", required=True)
 
     _sql_constraints = [
         ('unique_batch_code',

@@ -28,13 +28,19 @@ class OpCourse(models.Model):
     name = fields.Char('Name', required=True)
     code = fields.Char('Code', size=16, required=True)
     parent_id = fields.Many2one('op.course', 'Parent Course')
-    section = fields.Char('Section', size=32, required=True)
+    section = fields.Char('Section', size=32)
     evaluation_type = fields.Selection(
         [('normal', 'Normal'), ('GPA', 'GPA'), ('CWA', 'CWA'), ('CCE', 'CCE')],
-        'Evaluation Type', default="normal", required=True)
+        'Evaluation Type', default="normal")
     subject_ids = fields.Many2many('op.subject', string='Subject(s)')
     max_unit_load = fields.Float("Maximum Unit Load")
     min_unit_load = fields.Float("Minimum Unit Load")
+    price = fields.Float('价格')
+    state = fields.Selection(
+        [('1', '启用'), ('0', '停用')],
+        '启用状态', default="1", required=True)
+
+    campus_ids = fields.Many2many('op.campus',string='校区')
 
     _sql_constraints = [
         ('unique_course_code',

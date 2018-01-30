@@ -11,7 +11,9 @@
                     <field name="code" />
                     <field name="type" />
                     <field name="subject_type" />
-                    <field name="grade_weightage" />
+                    <!--<field name="grade_weightage" />-->
+                    <field name="period" />
+                    <field name="state" />
                 </tree>
             </field>
         </record>
@@ -27,7 +29,9 @@
                             <field name="code" />
                             <field name="type" />
                             <field name="subject_type" />
-                            <field name="grade_weightage" />
+                            <!--<field name="grade_weightage" />-->
+                            <field name="period" />
+                            <field name="state" />
                         </group>
                     </sheet>
                 </form>
