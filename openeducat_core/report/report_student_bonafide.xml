@@ -1,11 +1,4 @@
 <?xml version="1.0" encoding="utf-8"?>
-<!--
-mofify history
-
-    2017/12/29 #6 zhoujiang
-
-
--->
 <odoo>
     <data>
         <template id="report_student_bonafide">
@@ -40,10 +33,9 @@ mofify history
                                             <strong>
                                                 <u>
                                                     <span t-raw="'%s' % o.name if o.name else ''" />
-                                                    <!--#6 del-->
-                                                    <!--span
+                                                    <span
                                                         t-raw="'%s' % o.middle_name if o.middle_name else ''" />
-                                                    <span t-raw="'%s' % o.last_name if o.last_name else ''" /-->
+                                                    <span t-raw="'%s' % o.last_name if o.last_name else ''" />
                                                 </u>
                                             </strong>
                                             <font color="white">.</font>
